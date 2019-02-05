@@ -1,4 +1,5 @@
-"""Kata can be found at https://www.codewars.com/kata/calculator/train/python"""
+"""Kata can be found at https://www.codewars.com/kata/calculator/train/python, grade: 3kyu"""
+
 
 # Coding Eval calculator from scratch
 
