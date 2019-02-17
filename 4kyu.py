@@ -20,6 +20,20 @@ def dbl_linear(n):
             y += 1
     return u[n]
 
+#https://www.codewars.com/kata/51e056fe544cf36c410000fb, grade: 4kyu
+
+from collections import Counter
+import re
+
+# slightly fiddly, because of requirements, really just a regex problem
+def top_3_words(text):
+    t  = ' '.join(s for s in t.lower().split() if any(c.isalpha() for c in s))  
+    t = re.findall(r"[a-z']+",t)
+    t = re.sub(r" '+ ", " ",' '.join(t))
+    v = Counter(t.split())
+    return sorted(v, key=v.get, reverse=True)[:3]
+
+
 
 #https://www.codewars.com/kata/range-extraction/train/python, grade: 4kyu
 
