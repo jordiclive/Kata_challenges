@@ -16,8 +16,8 @@ def alphametics(crypt_input):
 
     def possible_dicts(crypt_input):  # Generate every combination of letter mapped to 0-9 possible, here efficiency can be gained
         letters = find_alpha_set(crypt_input) # by first removing combinations which map a beginning letter of a word to 0
-        permutations = list(itertools.permutations(Nos, len(letters)))
-        possible_dicts = [dict(zip(letters,comb)) for comb in permutations]
+        permutations = list(itertools.permutations(Nos, len(letters))) # obviously one needs to use generators, and yield and start with units to actually make efficient
+        possible_dicts = [dict(zip(letters,comb)) for comb in permutations] # helps that problem only uses + operation
         return possible_dicts
 
     def evaluate(dict_,x): # evaluate the code mapping
